@@ -4,12 +4,8 @@ title = 'Above the Ruin'
 theme = 'beautifulhugo'
 
 [Params]
-  homeTitle = "Above the Ruin"
+    homeTitle = "Above the Ruin"
 
 [Params.author]
     name = "Cjmarkham"
     website = "https://abovetheruin.com"
-
-[services]
-  [services.googleAnalytics]
-    id = 'G-5J8FYDB2YC'

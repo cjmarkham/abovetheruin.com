@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Above the Ruin</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Jan 2026 08:31:43 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Jan 2026 12:43:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>9th January 2027</title>
+      <link>http://localhost:1313/posts/about/</link>
+      <pubDate>Fri, 09 Jan 2026 12:43:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/about/</guid>
+      <description>&lt;h1 id=&#34;about-above-the-ruin&#34;&gt;About &amp;ldquo;Above the Ruin&amp;rdquo;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Above the Ruin&lt;/strong&gt; is a cozy game, such as Stardew Valley or Harvest Moon.&#xA;However, I&amp;rsquo;ve decided to go with darker tones and themes.&lt;/p&gt;&#xA;&lt;p&gt;The game is set in a post-apocalyptic setting, where survivors live on the rooftops of skyscrapers.&lt;/p&gt;&#xA;&lt;p&gt;The rooftop is your home. Here, you&amp;rsquo;ll be able to do all the cozy things, such as farming, tending to your animals, and so on.&lt;/p&gt;&#xA;&lt;p&gt;If you fancy leaving the safety of the rooftops, you can choose to descend through the tower.&#xA;Here, you&amp;rsquo;ll be able to fight off enemies, explore abandoned homes and offices and find loot to improve life on the surface.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>9th January 2027</title>
       <link>http://localhost:1313/posts/welcome/</link>
