@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Above the Ruin</title>
-    <link>https://abovetheruin.com/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on Above the Ruin</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 09 Jan 2026 08:31:43 +0000</lastBuildDate>
-    <atom:link href="https://abovetheruin.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>9th January 2027</title>
-      <link>https://abovetheruin.com/posts/pixel-art-is-hard/</link>
+      <link>http://localhost:1313/posts/welcome/</link>
       <pubDate>Fri, 09 Jan 2026 08:31:43 +0000</pubDate>
-      <guid>https://abovetheruin.com/posts/pixel-art-is-hard/</guid>
-      <description>&lt;h1 id=&#34;pixel-art-is-hard&#34;&gt;Pixel art is hard&lt;/h1&gt;&#xA;&lt;p&gt;This is a test post.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/welcome/</guid>
+      <description>&lt;h1 id=&#34;welcome&#34;&gt;Welcome&lt;/h1&gt;&#xA;&lt;p&gt;This blog will serve as updates for the game, from technical challenges, artistic ones,  or just random&#xA;thoughts throughout my journey.&lt;/p&gt;&#xA;&lt;p&gt;Making a game has always been a dream of mine. I got in to the Web Software Engineering industry&#xA;about 15 years ago, but I&amp;rsquo;ve always wished I got in to game development early on.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Above the Ruin&lt;/strong&gt; is a passion project that I&amp;rsquo;m working on in my spare time.&#xA;If you have any questions, please feel free to reach out at &lt;a href=&#34;&#34;&gt;hello@abovetheruin.com&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
