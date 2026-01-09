@@ -1,6 +1,7 @@
 +++
 date = '2026-01-09T12:43:00Z'
 title = '9th January 2027'
+description = "foo bar"
 +++
 
 # About "Above the Ruin"
