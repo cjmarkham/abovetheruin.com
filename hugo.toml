@@ -1,0 +1,4 @@
+baseURL = 'https://abovetheruin.com/'
+languageCode = 'en-us'
+title = 'Above the Ruin'
+theme = 'ananke'
