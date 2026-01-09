@@ -1,7 +1,6 @@
 +++
 date = '2026-01-09T08:31:43Z'
 title = '9th January 2027'
-description = "foo bar"
 +++
 
 # Welcome
