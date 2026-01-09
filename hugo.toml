@@ -5,7 +5,6 @@ theme = 'beautifulhugo'
 
 [Params]
     homeTitle = "Above the Ruin"
-    Description = "Some description"
 
 [Params.author]
     name = "Cjmarkham"
