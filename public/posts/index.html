@@ -61,7 +61,7 @@
   <body>
     &nbsp;
 
-    <div class="intro-header" style="margin-top:40px;">
+    <div class="intro-header" style="margin-top:40px;background:red">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -79,6 +79,70 @@
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
         <div class="posts-list">
+          
+            <article class="post-preview">
+    <a href="http://localhost:1313/posts/dialogue/">
+        <h2 class="post-title">Dialogue - What do I say?</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 10, 2026
+  
+  
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Cjmarkham
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        <p>The first system I designed when I started <strong>Above the Ruin</strong> was the dialogue system.
+I wanted something that would make it easy to write dialogue, but also easy to extend for potential modders.</p>
+<p>The first part was how to load in the dialogue. I went with JSON files as this is easier to manage, structured and can be extended.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;dialog&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;16_spring&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;So, {playerName}...&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;nextNode&#34;</span>: <span style="color:#e6db74">&#34;nextOne&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;nextOne&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;portrait&#34;</span>: <span style="color:#e6db74">&#34;angry&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;actions&#34;</span>: [{
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;moveNPC&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;targetRelativePosition&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;y&#34;</span>: <span style="color:#ae81ff">-1</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;It&#39;s day {dayNumber} of {season}. Are you sure you want to go down in to the tower?&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;choices&#34;</span>: [{
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Yes&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;nextNode&#34;</span>: <span style="color:#e6db74">&#34;nextOne_yes&#34;</span>
+</span></span><span style="display:flex;"><span>      }, {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;No&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;nextNode&#34;</span>: <span style="color:#e6db74">&#34;nextOne_no&#34;</span>
+</span></span><span style="display:flex;"><span>      }]
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">...</span>
+</span></span></code></pre></div><p>Each object in the JSON represents a line of dialogue, with several options depending on the NPC and the conversation.</p>
+        <a href="http://localhost:1313/posts/dialogue/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+
+</article>
           
             <article class="post-preview">
     <a href="http://localhost:1313/posts/pixel-art-is-hard/">
