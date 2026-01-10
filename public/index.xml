@@ -6,8 +6,15 @@
     <description>Recent content on Above the Ruin</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Jan 2026 06:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Jan 2026 12:30:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pixel Art is Hard (Part Deux)</title>
+      <link>http://localhost:1313/posts/pixel-art-is-hard-2/</link>
+      <pubDate>Sat, 10 Jan 2026 12:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/pixel-art-is-hard-2/</guid>
+      <description>&lt;p&gt;Following on from &lt;a href=&#34;http://localhost:1313/posts/pixel-art-is-hard&#34;&gt;Pixel Art is Hard&lt;/a&gt;, I decided to spend some more time creating props for &lt;strong&gt;Above the Ruin&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;One of the important aspects of the game will be water. There will be a few ways of obtaining it, from basic buckets to water collection systems.&#xA;For now, I spent some time creating a tank, which will collect a small amount of water passively. This can be upgraded with a tarp to funnel&#xA;more water in to the tank, increasing the generation.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Dialogue - What do I say?</title>
       <link>http://localhost:1313/posts/dialogue/</link>

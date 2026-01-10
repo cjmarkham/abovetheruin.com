@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Above the Ruin</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Jan 2026 06:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Jan 2026 12:30:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pixel Art is Hard (Part Deux)</title>
+      <link>http://localhost:1313/posts/pixel-art-is-hard-2/</link>
+      <pubDate>Sat, 10 Jan 2026 12:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/pixel-art-is-hard-2/</guid>
+      <description>&lt;p&gt;Following on from &lt;a href=&#34;http://localhost:1313/posts/pixel-art-is-hard&#34;&gt;Pixel Art is Hard&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/prop-examples.png&#34; alt=&#34;Prop Examples&#34;&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Dialogue - What do I say?</title>
       <link>http://localhost:1313/posts/dialogue/</link>
