@@ -1,9 +1,7 @@
 +++
 date = '2026-01-09T12:43:00Z'
-title = '9th January 2027'
+title = 'About "Above the Ruin"'
 +++
-
-# About "Above the Ruin"
 
 **Above the Ruin** is a cozy game, such as Stardew Valley or Harvest Moon.
 However, I've decided to go with darker tones and themes.

@@ -1,9 +1,7 @@
 +++
 date = '2026-01-09T08:31:43Z'
-title = '9th January 2027'
+title = 'Welcome'
 +++
-
-# Welcome
 
 This blog will serve as updates for the game, from technical challenges, artistic ones,  or just random 
 thoughts throughout my journey.

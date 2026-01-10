@@ -6,21 +6,28 @@
     <description>Recent content in Posts on Above the Ruin</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Jan 2026 12:43:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Jan 2026 03:10:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>9th January 2027</title>
+      <title>Pixel Art is Hard</title>
+      <link>http://localhost:1313/posts/pixel-art-is-hard/</link>
+      <pubDate>Sat, 10 Jan 2026 03:10:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/pixel-art-is-hard/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m at the stage now where I have a few systems in place, but I&amp;rsquo;m tired of staring at basic shapes&#xA;and a grey-boxed world.&lt;/p&gt;&#xA;&lt;p&gt;I am a backend engineer, so stuff like art doesn&amp;rsquo;t come naturally to me. However, I&amp;rsquo;ve always admired&#xA;pixel art, having grown up in the age of Mario on the Snes. I was also inspired by Eric Barone, the&#xA;creator of Stardew Valley. He managed to do all of the pixel art himself.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About &#34;Above the Ruin&#34;</title>
       <link>http://localhost:1313/posts/about/</link>
       <pubDate>Fri, 09 Jan 2026 12:43:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/about/</guid>
-      <description>&lt;h1 id=&#34;about-above-the-ruin&#34;&gt;About &amp;ldquo;Above the Ruin&amp;rdquo;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Above the Ruin&lt;/strong&gt; is a cozy game, such as Stardew Valley or Harvest Moon.&#xA;However, I&amp;rsquo;ve decided to go with darker tones and themes.&lt;/p&gt;&#xA;&lt;p&gt;The game is set in a post-apocalyptic setting, where survivors live on the rooftops of skyscrapers.&lt;/p&gt;&#xA;&lt;p&gt;The rooftop is your home. Here, you&amp;rsquo;ll be able to do all the cozy things, such as farming, tending to your animals, and so on.&lt;/p&gt;&#xA;&lt;p&gt;If you fancy leaving the safety of the rooftops, you can choose to descend through the tower.&#xA;Here, you&amp;rsquo;ll be able to fight off enemies, explore abandoned homes and offices and find loot to improve life on the surface.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Above the Ruin&lt;/strong&gt; is a cozy game, such as Stardew Valley or Harvest Moon.&#xA;However, I&amp;rsquo;ve decided to go with darker tones and themes.&lt;/p&gt;&#xA;&lt;p&gt;The game is set in a post-apocalyptic setting, where survivors live on the rooftops of skyscrapers.&lt;/p&gt;&#xA;&lt;p&gt;The rooftop is your home. Here, you&amp;rsquo;ll be able to do all the cozy things, such as farming, tending to your animals, and so on.&lt;/p&gt;&#xA;&lt;p&gt;If you fancy leaving the safety of the rooftops, you can choose to descend through the tower.&#xA;Here, you&amp;rsquo;ll be able to fight off enemies, explore abandoned homes and offices and find loot to improve life on the surface.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>9th January 2027</title>
+      <title>Welcome</title>
       <link>http://localhost:1313/posts/welcome/</link>
       <pubDate>Fri, 09 Jan 2026 08:31:43 +0000</pubDate>
       <guid>http://localhost:1313/posts/welcome/</guid>
-      <description>&lt;h1 id=&#34;welcome&#34;&gt;Welcome&lt;/h1&gt;&#xA;&lt;p&gt;This blog will serve as updates for the game, from technical challenges, artistic ones,  or just random&#xA;thoughts throughout my journey.&lt;/p&gt;&#xA;&lt;p&gt;Making a game has always been a dream of mine. I got in to the Web Software Engineering industry&#xA;about 15 years ago, but I&amp;rsquo;ve always wished I got in to game development early on.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Above the Ruin&lt;/strong&gt; is a passion project that I&amp;rsquo;m working on in my spare time.&#xA;If you have any questions, please feel free to reach out at &lt;a href=&#34;&#34;&gt;hello@abovetheruin.com&lt;/a&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This blog will serve as updates for the game, from technical challenges, artistic ones,  or just random&#xA;thoughts throughout my journey.&lt;/p&gt;&#xA;&lt;p&gt;Making a game has always been a dream of mine. I got in to the Web Software Engineering industry&#xA;about 15 years ago, but I&amp;rsquo;ve always wished I got in to game development early on.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Above the Ruin&lt;/strong&gt; is a passion project that I&amp;rsquo;m working on in my spare time.&#xA;If you have any questions, please feel free to reach out at &lt;a href=&#34;&#34;&gt;hello@abovetheruin.com&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
