@@ -2,9 +2,14 @@ baseURL = 'https://abovetheruin.com/'
 languageCode = 'en-us'
 title = 'Above the Ruin'
 theme = 'beautifulhugo'
+logo = "images/logo.png"
 
 [Params]
     homeTitle = "Above the Ruin"
+
+[[Params.bigimg]]
+    src = "images/logo.png"
+    position = "center top"
 
 [Params.author]
     name = "Cjmarkham"
