@@ -3,9 +3,12 @@ languageCode = 'en-us'
 title = 'Above the Ruin'
 theme = 'beautifulhugo'
 logo = "images/logo.png"
+description = "THIS IS A DESCRIPTION"
 
 [Params]
     homeTitle = "Above the Ruin"
+    rss = true
+    socialShare = true
 
 [[Params.bigimg]]
     src = "images/logo.png"
