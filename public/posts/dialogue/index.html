@@ -1,0 +1,417 @@
+
+
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>Dialogue - What do I say? - Above the Ruin</title>
+
+  <meta name="description" content="The first system I designed when I started Above the Ruin was the dialogue system.
+I wanted something that would make it easy to write dialogue, but also easy to extend for potential modders.
+The first part was how to load in the dialogue. I went with JSON files as this is easier to manage, structured and can be extended.
+{
+  &#34;dialog&#34;: {
+    &#34;16_spring&#34;: {
+      &#34;text&#34;: &#34;So, {playerName}...&#34;,
+      &#34;nextNode&#34;: &#34;nextOne&#34;
+    },
+    &#34;nextOne&#34;: {
+      &#34;portrait&#34;: &#34;angry&#34;,
+      &#34;actions&#34;: [{
+        &#34;type&#34;: &#34;moveNPC&#34;,
+        &#34;targetRelativePosition&#34;: {
+          &#34;y&#34;: -1
+        }
+      }],
+      &#34;text&#34;: &#34;It&#39;s day {dayNumber} of {season}. Are you sure you want to go down in to the tower?&#34;,
+      &#34;choices&#34;: [{
+        &#34;text&#34;: &#34;Yes&#34;,
+        &#34;nextNode&#34;: &#34;nextOne_yes&#34;
+      }, {
+        &#34;text&#34;: &#34;No&#34;,
+        &#34;nextNode&#34;: &#34;nextOne_no&#34;
+      }]
+    },
+    ...
+Each object in the JSON represents a line of dialogue, with several options depending on the NPC and the conversation.">
+  <meta name="author" content="Cjmarkham"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Above the Ruin",
+    
+    "url": "http:\/\/localhost:1313\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/localhost:1313\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/posts\/dialogue\/",
+          "name": "Dialogue what do i say?"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Cjmarkham"
+  },
+  "headline": "Dialogue - What do I say?",
+  "description" : "The first system I designed when I started Above the Ruin was the dialogue system. I wanted something that would make it easy to write dialogue, but also easy to extend for potential modders.\nThe first part was how to load in the dialogue. I went with JSON files as this is easier to manage, structured and can be extended.\n{ \u0026#34;dialog\u0026#34;: { \u0026#34;16_spring\u0026#34;: { \u0026#34;text\u0026#34;: \u0026#34;So, {playerName}...\u0026#34;, \u0026#34;nextNode\u0026#34;: \u0026#34;nextOne\u0026#34; }, \u0026#34;nextOne\u0026#34;: { \u0026#34;portrait\u0026#34;: \u0026#34;angry\u0026#34;, \u0026#34;actions\u0026#34;: [{ \u0026#34;type\u0026#34;: \u0026#34;moveNPC\u0026#34;, \u0026#34;targetRelativePosition\u0026#34;: { \u0026#34;y\u0026#34;: -1 } }], \u0026#34;text\u0026#34;: \u0026#34;It\u0026#39;s day {dayNumber} of {season}. Are you sure you want to go down in to the tower?\u0026#34;, \u0026#34;choices\u0026#34;: [{ \u0026#34;text\u0026#34;: \u0026#34;Yes\u0026#34;, \u0026#34;nextNode\u0026#34;: \u0026#34;nextOne_yes\u0026#34; }, { \u0026#34;text\u0026#34;: \u0026#34;No\u0026#34;, \u0026#34;nextNode\u0026#34;: \u0026#34;nextOne_no\u0026#34; }] }, ... Each object in the JSON represents a line of dialogue, with several options depending on the NPC and the conversation.\n",
+  "inLanguage" : "en",
+  "wordCount":  364 ,
+  "datePublished" : "2026-01-10T06:00:00\u002b00:00",
+  "dateModified" : "2026-01-10T06:00:00\u002b00:00",
+  "image" : "http:\/\/localhost:1313\/",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/posts\/dialogue\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/localhost:1313\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/localhost:1313\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+
+<meta property="og:title" content="Dialogue - What do I say?" />
+<meta property="og:description" content="The first system I designed when I started Above the Ruin was the dialogue system.
+I wanted something that would make it easy to write dialogue, but also easy to extend for potential modders.
+The first part was how to load in the dialogue. I went with JSON files as this is easier to manage, structured and can be extended.
+{
+  &#34;dialog&#34;: {
+    &#34;16_spring&#34;: {
+      &#34;text&#34;: &#34;So, {playerName}...&#34;,
+      &#34;nextNode&#34;: &#34;nextOne&#34;
+    },
+    &#34;nextOne&#34;: {
+      &#34;portrait&#34;: &#34;angry&#34;,
+      &#34;actions&#34;: [{
+        &#34;type&#34;: &#34;moveNPC&#34;,
+        &#34;targetRelativePosition&#34;: {
+          &#34;y&#34;: -1
+        }
+      }],
+      &#34;text&#34;: &#34;It&#39;s day {dayNumber} of {season}. Are you sure you want to go down in to the tower?&#34;,
+      &#34;choices&#34;: [{
+        &#34;text&#34;: &#34;Yes&#34;,
+        &#34;nextNode&#34;: &#34;nextOne_yes&#34;
+      }, {
+        &#34;text&#34;: &#34;No&#34;,
+        &#34;nextNode&#34;: &#34;nextOne_no&#34;
+      }]
+    },
+    ...
+Each object in the JSON represents a line of dialogue, with several options depending on the NPC and the conversation.">
+<meta property="og:url" content="http://localhost:1313/posts/dialogue/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Above the Ruin" />
+
+  <meta name="twitter:title" content="Dialogue - What do I say?" />
+  <meta name="twitter:description" content="The first system I designed when I started Above the Ruin was the dialogue system.
+I wanted something that would make it easy to write dialogue, but also easy to extend for potential modders.
+The …">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="generator" content="Hugo 0.154.3">
+  <link rel="alternate" href="http://localhost:1313/index.xml" type="application/rss+xml" title="Above the Ruin"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/brands.css" integrity="sha384-+eXGm6TmVoCZR1gX03US+L++L2mJIfOvp2X0+luTuEktXaF5F+e3zn0sO0HBvOyT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/fontawesome.css" integrity="sha384-B5nyPZa7e84uCJEYHtevCdVYtQosWsbDSRtq3cy/jeSVtQW05GL8CKXO7waXsjPK" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/regular.css" integrity="sha384-V71z/A/p/DGaZAryHhiSXRQj8HdQmK2nBgL2bX23MGD+h6ZKpyxOO76f5eSXmIaj" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/solid.css" integrity="sha384-1IIShlrK5iYgvS7OAgIH3prz4RAFP7hHZ2MaLIb9l3+trFwwnw/NdCWcUHlymZDU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/svg.css" integrity="sha384-iBa7uugTOHXqQ2ngvDYJyKrPPQbd9n2P3EQe+o/0+HZe5TNvV+LO5X0lLLUrXLHP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/svg-with-js.css" integrity="sha384-STWnS5AGz6M2YxsnGAd536EqcE2y+ktGovMMuhtXLsCBtl7lujeQj2eN4eDxa57x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/v4-font-face.css" integrity="sha384-fH83IkgQi7kturzlxpXfNdsR8aUOcqj5HUORRVnSvJgObZkIw6aqKAaQx20IWyB/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/v4-shims.css" integrity="sha384-cCODJHSivNBsaHei/8LC0HUD58kToSbDU+xT7Rs51BO1v/IvgT/uM0W6xMoUqKfn" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/v5-font-face.css" integrity="sha384-atSdF89mIn15dv+o2LKkDM6mCh3hwh6A7mwZ6F2it/kenqZbMu+QW/ye1OG4XSWV" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"><link rel="stylesheet" href="http://localhost:1313/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="http://localhost:1313/css/syntax.css" /><link rel="stylesheet" href="http://localhost:1313/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+  </head>
+  <body>
+    &nbsp;
+
+    <div class="intro-header" style="margin-top:40px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <a href="/">
+                    <img src="/images/logo.png" alt="Above the Ruin">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+<div class="container" role="main">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="posts-list">
+                <article class="post-preview">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-10">
+                            <a href="">
+                                <h2 class="post-title">Dialogue - What do I say?</h2>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-2">
+                            <h5 class="post-title" style="text-align:right;font-size:20px;">
+                                <a href="/">
+                                    [Back]
+                                </a>
+                            </h5>
+                        </div>
+                    </div>
+                    <p class="post-meta">
+                        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 10, 2026
+  
+  
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Cjmarkham
+    
+  
+  
+</span>
+
+
+                    </p>
+                    <div class="post-entry">
+                        <p>The first system I designed when I started <strong>Above the Ruin</strong> was the dialogue system.
+I wanted something that would make it easy to write dialogue, but also easy to extend for potential modders.</p>
+<p>The first part was how to load in the dialogue. I went with JSON files as this is easier to manage, structured and can be extended.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;dialog&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;16_spring&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;So, {playerName}...&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;nextNode&#34;</span>: <span style="color:#e6db74">&#34;nextOne&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;nextOne&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;portrait&#34;</span>: <span style="color:#e6db74">&#34;angry&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;actions&#34;</span>: [{
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;moveNPC&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;targetRelativePosition&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;y&#34;</span>: <span style="color:#ae81ff">-1</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;It&#39;s day {dayNumber} of {season}. Are you sure you want to go down in to the tower?&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;choices&#34;</span>: [{
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Yes&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;nextNode&#34;</span>: <span style="color:#e6db74">&#34;nextOne_yes&#34;</span>
+</span></span><span style="display:flex;"><span>      }, {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;No&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;nextNode&#34;</span>: <span style="color:#e6db74">&#34;nextOne_no&#34;</span>
+</span></span><span style="display:flex;"><span>      }]
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">...</span>
+</span></span></code></pre></div><p>Each object in the JSON represents a line of dialogue, with several options depending on the NPC and the conversation.</p>
+<p>But first was how to decide which dialogue &ldquo;node&rdquo; to choose when interacting with an NPC.
+I originally thought about having conditions inside of each dialogue node.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;conditions&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;day&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;op&#34;</span>: <span style="color:#e6db74">&#34;eq&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;value&#34;</span>: <span style="color:#ae81ff">12</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In the above example, the dialogue node would be selected if the current day was 12.
+This comes from my software engineering background and databases, and that&rsquo;s exactly how I&rsquo;d need to treat this JSON file.
+If I wanted to see which dialogue node was needed, I&rsquo;d need to loop through every node and see if the conditions can be satisfied.
+For a relatively small game like <strong>Above the Ruin</strong>, it wouldn&rsquo;t be too bad. But I still didn&rsquo;t like it.</p>
+<p>So the next option was &ldquo;candidates&rdquo;. As you can see in the screenshot, the key of certain nodes is in a specific format, for example <code>16_Spring</code>.
+The idea behind this is that the conditions are added to the keys. I then build a list of candidates, based on things like the current day, season, time etc.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">string</span>[] candidates = {
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">$&#34;{ctx.hour}_{ctx.day}_{ctx.season}&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">$&#34;{ctx.day}_{ctx.season}&#34;</span>,
+</span></span><span style="display:flex;"><span>  ctx.day.ToString()
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>This means that I only need to check for a match in the keys.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">string</span> candidate <span style="color:#66d9ef">in</span> candidates) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (file.dialog.ContainsKey(candidate)) {
+</span></span></code></pre></div><p>There&rsquo;s a lot more to the dialogue system, like actions and choices, but I&rsquo;ll leave that for another post.</p>
+
+                    </div>
+
+                    
+
+                    
+                    <hr/>
+                    <section id="social-share">
+                        <div class="list-inline footer-links">
+                            
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fdialogue%2f&amp;text=Dialogue%20-%20What%20do%20I%20say%3f&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fdialogue%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fdialogue%2f&amp;title=Dialogue%20-%20What%20do%20I%20say%3f" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fdialogue%2f&amp;title=Dialogue%20-%20What%20do%20I%20say%3f" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fdialogue%2f&amp;title=Dialogue%20-%20What%20do%20I%20say%3f" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fdialogue%2f&amp;description=Dialogue%20-%20What%20do%20I%20say%3f" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+                        </div>
+                    </section>
+                    
+
+                    
+                </article>
+
+                
+                <ul class="pager blog-pager">
+                    
+                    <li class="previous">
+                        <a href="http://localhost:1313/posts/pixel-art-is-hard/" data-toggle="tooltip" data-placement="top"
+                           title="Pixel Art is Hard">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+                
+
+
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+
+      <footer>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="https://abovetheruin.com">Cjmarkham</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://localhost:1313/">Above the Ruin</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.154.3</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script src="http://localhost:1313/js/main.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="http://localhost:1313/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
