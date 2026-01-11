@@ -6,8 +6,15 @@
     <description>Recent content on Above the Ruin</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Jan 2026 12:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Jan 2026 14:37:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Tileset So Far</title>
+      <link>http://localhost:1313/posts/tileset/</link>
+      <pubDate>Sun, 11 Jan 2026 14:37:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/tileset/</guid>
+      <description>&lt;p&gt;After playing around with pixel art for a few days, I&amp;rsquo;m pleased to share what I have so far.&#xA;I decided to put it all together in a way that a player might place their buildings.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/tileset.png&#34; alt=&#34;img.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;There&amp;rsquo;s room for improvement, but it&amp;rsquo;s starting to look like an actual game now.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Pixel Art is Hard (Part Deux)</title>
       <link>http://localhost:1313/posts/pixel-art-is-hard-2/</link>
