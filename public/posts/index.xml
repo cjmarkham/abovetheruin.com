@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Above the Ruin</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 11 Jan 2026 14:37:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Jan 2026 07:20:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Removing Actions from Dialogue</title>
+      <link>http://localhost:1313/posts/removing-actions/</link>
+      <pubDate>Wed, 14 Jan 2026 07:20:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/removing-actions/</guid>
+      <description>&lt;p&gt;The dialogue system has gotten a bit too complex and is doing too much.&#xA;When I wrote the system, which was the first one I wrote, I envisioned dialogue with actions.&#xA;Those actions could trigger before text is rendered or when the interact button was pressed.&#xA;Actions would be ran sequentially. For example in the JSON below, the NPC would move down 1 tile, then up 1 tile.&#xA;There was also an action to move the camera, which followed the same schema.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>The Tileset So Far</title>
       <link>http://localhost:1313/posts/tileset/</link>
