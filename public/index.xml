@@ -6,8 +6,15 @@
     <description>Recent content on Above the Ruin</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Jan 2026 07:20:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Jan 2026 06:10:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Item Definitions</title>
+      <link>http://localhost:1313/posts/item-definitions/</link>
+      <pubDate>Thu, 15 Jan 2026 06:10:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/item-definitions/</guid>
+      <description>&lt;p&gt;With a lot of items in &lt;strong&gt;Above the Ruin&lt;/strong&gt;, it&amp;rsquo;s important that I get them right. They should be easy to create and easy to extend.&#xA;Items can range from something like carrots, to water collectors equipped with a tarp funnel. Each one can have several different&#xA;properties like being able to consume them or place them in the world and finding a way nice way to do this was tricky.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Removing Actions from Dialogue</title>
       <link>http://localhost:1313/posts/removing-actions/</link>
