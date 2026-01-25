@@ -1,0 +1,326 @@
+
+
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>Refactoring for Saving - Above the Ruin</title>
+
+  <meta name="description" content="Up until now, I&rsquo;ve been having fun creating systems. However, when it came to
+wiring them up, I was a bit cavalier with how that was done. I did try to separate
+concerns as much as possible, having controllers to do the logic while renderers would
+listen to events that they emitted.
+However, if we take the PlayerController as an example, it had a lot of references on
+it for UI. Things like the dialogue wrapper, conversation box etc. For this vertical slice,
+it wasn&rsquo;t too bad. However, I&rsquo;m at the stage now where I need to move the player to a new scene.">
+  <meta name="author" content="Cjmarkham"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Above the Ruin",
+    
+    "url": "http:\/\/localhost:1313\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/localhost:1313\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/posts\/refactoring-for-saves\/",
+          "name": "Refactoring for saving"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Cjmarkham"
+  },
+  "headline": "Refactoring for Saving",
+  "description" : "Up until now, I\u0026rsquo;ve been having fun creating systems. However, when it came to wiring them up, I was a bit cavalier with how that was done. I did try to separate concerns as much as possible, having controllers to do the logic while renderers would listen to events that they emitted.\nHowever, if we take the PlayerController as an example, it had a lot of references on it for UI. Things like the dialogue wrapper, conversation box etc. For this vertical slice, it wasn\u0026rsquo;t too bad. However, I\u0026rsquo;m at the stage now where I need to move the player to a new scene.\n",
+  "inLanguage" : "en",
+  "wordCount":  505 ,
+  "datePublished" : "2026-01-25T16:20:00\u002b00:00",
+  "dateModified" : "2026-01-25T16:20:00\u002b00:00",
+  "image" : "http:\/\/localhost:1313\/",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/posts\/refactoring-for-saves\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/localhost:1313\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/localhost:1313\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+
+<meta property="og:title" content="Refactoring for Saving" />
+<meta property="og:description" content="Up until now, I&rsquo;ve been having fun creating systems. However, when it came to
+wiring them up, I was a bit cavalier with how that was done. I did try to separate
+concerns as much as possible, having controllers to do the logic while renderers would
+listen to events that they emitted.
+However, if we take the PlayerController as an example, it had a lot of references on
+it for UI. Things like the dialogue wrapper, conversation box etc. For this vertical slice,
+it wasn&rsquo;t too bad. However, I&rsquo;m at the stage now where I need to move the player to a new scene.">
+<meta property="og:url" content="http://localhost:1313/posts/refactoring-for-saves/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Above the Ruin" />
+
+  <meta name="twitter:title" content="Refactoring for Saving" />
+  <meta name="twitter:description" content="Up until now, I&rsquo;ve been having fun creating systems. However, when it came to
+wiring them up, I was a bit cavalier with how that was done. I did try to separate
+concerns as much as possible, …">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="generator" content="Hugo 0.154.3">
+  <link rel="alternate" href="http://localhost:1313/index.xml" type="application/rss+xml" title="Above the Ruin"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/brands.css" integrity="sha384-+eXGm6TmVoCZR1gX03US+L++L2mJIfOvp2X0+luTuEktXaF5F+e3zn0sO0HBvOyT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/fontawesome.css" integrity="sha384-B5nyPZa7e84uCJEYHtevCdVYtQosWsbDSRtq3cy/jeSVtQW05GL8CKXO7waXsjPK" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/regular.css" integrity="sha384-V71z/A/p/DGaZAryHhiSXRQj8HdQmK2nBgL2bX23MGD+h6ZKpyxOO76f5eSXmIaj" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/solid.css" integrity="sha384-1IIShlrK5iYgvS7OAgIH3prz4RAFP7hHZ2MaLIb9l3+trFwwnw/NdCWcUHlymZDU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/svg.css" integrity="sha384-iBa7uugTOHXqQ2ngvDYJyKrPPQbd9n2P3EQe+o/0+HZe5TNvV+LO5X0lLLUrXLHP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/svg-with-js.css" integrity="sha384-STWnS5AGz6M2YxsnGAd536EqcE2y+ktGovMMuhtXLsCBtl7lujeQj2eN4eDxa57x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/v4-font-face.css" integrity="sha384-fH83IkgQi7kturzlxpXfNdsR8aUOcqj5HUORRVnSvJgObZkIw6aqKAaQx20IWyB/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/v4-shims.css" integrity="sha384-cCODJHSivNBsaHei/8LC0HUD58kToSbDU+xT7Rs51BO1v/IvgT/uM0W6xMoUqKfn" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/v5-font-face.css" integrity="sha384-atSdF89mIn15dv+o2LKkDM6mCh3hwh6A7mwZ6F2it/kenqZbMu+QW/ye1OG4XSWV" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"><link rel="stylesheet" href="http://localhost:1313/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="http://localhost:1313/css/syntax.css" /><link rel="stylesheet" href="http://localhost:1313/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+  </head>
+  <body>
+    &nbsp;
+
+    <div class="intro-header" style="margin-top: 0; padding: 40px 0">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <a href="/">
+                    <img src="/images/logo.png" alt="Above the Ruin">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Up until now, I&rsquo;ve been having fun creating systems. However, when it came to
+wiring them up, I was a bit cavalier with how that was done. I did try to separate
+concerns as much as possible, having controllers to do the logic while renderers would
+listen to events that they emitted.</p>
+<p>However, if we take the <code>PlayerController</code> as an example, it had a lot of references on
+it for UI. Things like the dialogue wrapper, conversation box etc. For this vertical slice,
+it wasn&rsquo;t too bad. However, I&rsquo;m at the stage now where I need to move the player to a new scene.</p>
+<p>The player itself is marked as <code>DontDestroyOnLoad</code>, meaning they can persist through scene changes.
+After all, I don&rsquo;t want a different player in each scene. This also means that anything it relied on,
+such as the UI elements that were referenced, need to also be persisted.</p>
+<p>With all of these things persisted, it means I can send the player to a new scene and everything should just work.</p>
+<p>However, if the player goes back to the original scene, we end up with duplicates, and even another player.
+This is because they existed in the scene before runtime, and we&rsquo;ve just loaded that level again. So we end up with
+the pre-placed player, and the one we persisted.</p>
+<p>So, I created a &ldquo;bootstrap&rdquo; scene. This scene holds all of the things that need to be persisted. All of the different UI canvases,
+managers, some controllers etc. All of that is held in a parent <code>GameObject</code> and marked as <code>DontDestroyOnLoad</code>.
+As soon as the game starts, that scene is loaded and I immediately start loading the actual starting scene.
+Once that has loaded, the <code>GameRoot</code> script will spawn the player, I no longer rely on the player being in the scene before runtime.</p>
+<p>After that, there&rsquo;s a few bits and pieces that need to be wired up, like renderers. This is where the <code>UiRoot</code> comes in.
+This also sits in the Bootstrap scene and contains references to all the needed UI components such as dialogue, inventory etc.
+The <code>GameRoot</code> emits an event when the player is spawned, and the <code>UiRoot</code> subscribes to it, binding the different presenters that need it.
+For example, the <code>HealthController</code> is bound to the <code>HealthPresenter</code>, <code>InventoryScreenCoordinator</code> to the player etc.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> OnEnable() {
+</span></span><span style="display:flex;"><span>  gameRoot.playerManager.PlayerChanged += OnPlayerChanged;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> OnDisable() {
+</span></span><span style="display:flex;"><span>  gameRoot.playerManager.PlayerChanged -= OnPlayerChanged;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> OnPlayerChanged(PlayerController pc) {
+</span></span><span style="display:flex;"><span>  healthPresenter.Bind(pc.healthController);
+</span></span><span style="display:flex;"><span>  inventoryScreen.BindPlayer(pc.inventoryController, pc.combatController);
+</span></span><span style="display:flex;"><span>  currencyPresenter.Bind(pc.currencyController);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>A lot of things that held references when they shouldn&rsquo;t needed to be refactored.
+It was a war of attrition, refactoring, playing the game and fixing the errors one by one.
+But I&rsquo;m glad I decided to do it now, rather than later. Scene transitions are working now, which was the last
+big hurdle before I could put everything together.</p>
+<p>I&rsquo;m sure there&rsquo;s still something lingering, some reference that I didn&rsquo;t move or one that I didn&rsquo;t set.
+But I&rsquo;ll find those as I start wiring everything up in to a playable slice.</p>
+
+
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fposts%2frefactoring-for-saves%2f&amp;text=Refactoring%20for%20Saving&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2frefactoring-for-saves%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2frefactoring-for-saves%2f&amp;title=Refactoring%20for%20Saving" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2frefactoring-for-saves%2f&amp;title=Refactoring%20for%20Saving" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2frefactoring-for-saves%2f&amp;title=Refactoring%20for%20Saving" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2frefactoring-for-saves%2f&amp;description=Refactoring%20for%20Saving" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="http://localhost:1313/posts/producer-levels/" data-toggle="tooltip" data-placement="top" title="Producer Levels">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      <footer>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="https://abovetheruin.com">Cjmarkham</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://localhost:1313/">Above the Ruin</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.154.3</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script src="http://localhost:1313/js/main.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="http://localhost:1313/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
