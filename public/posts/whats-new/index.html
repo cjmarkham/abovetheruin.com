@@ -1,0 +1,436 @@
+
+
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>What&#39;s new? - Above the Ruin</title>
+
+  <meta name="description" content="It&rsquo;s been a while since I posted an update, so I thought now would be a good time to
+let you all know why that is.
+Other than the full time job that I have, I&rsquo;ve been working on Above The Ruin every day on my way to
+release a playabe demo.
+During this time, a lot of changes have happened. Most recently (yesterday in fact), I implemented
+a save and load system. I already had something in place for saving and loading stuff for scene
+transitions, but I didn&rsquo;t have anything to save the entire game state, in such a way that
+you could load a game rather than starting a new one each time.
+Now, you can save the game, and the state is saved as a JSON file, including things like game state and the state
+of every placed item, including things like the inventory of that item.">
+  <meta name="author" content="Cjmarkham"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Above the Ruin",
+    
+    "url": "http:\/\/localhost:1313\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/localhost:1313\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/posts\/whats-new\/",
+          "name": "What\u0027s new?"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Cjmarkham"
+  },
+  "headline": "What\u0027s new?",
+  "description" : "It\u0026rsquo;s been a while since I posted an update, so I thought now would be a good time to let you all know why that is.\nOther than the full time job that I have, I\u0026rsquo;ve been working on Above The Ruin every day on my way to release a playabe demo.\nDuring this time, a lot of changes have happened. Most recently (yesterday in fact), I implemented a save and load system. I already had something in place for saving and loading stuff for scene transitions, but I didn\u0026rsquo;t have anything to save the entire game state, in such a way that you could load a game rather than starting a new one each time. Now, you can save the game, and the state is saved as a JSON file, including things like game state and the state of every placed item, including things like the inventory of that item.\n",
+  "inLanguage" : "en",
+  "wordCount":  805 ,
+  "datePublished" : "2026-02-16T08:00:00\u002b00:00",
+  "dateModified" : "2026-02-16T08:00:00\u002b00:00",
+  "image" : "http:\/\/localhost:1313\/",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/posts\/whats-new\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/localhost:1313\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/localhost:1313\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+
+<meta property="og:title" content="What&#39;s new?" />
+<meta property="og:description" content="It&rsquo;s been a while since I posted an update, so I thought now would be a good time to
+let you all know why that is.
+Other than the full time job that I have, I&rsquo;ve been working on Above The Ruin every day on my way to
+release a playabe demo.
+During this time, a lot of changes have happened. Most recently (yesterday in fact), I implemented
+a save and load system. I already had something in place for saving and loading stuff for scene
+transitions, but I didn&rsquo;t have anything to save the entire game state, in such a way that
+you could load a game rather than starting a new one each time.
+Now, you can save the game, and the state is saved as a JSON file, including things like game state and the state
+of every placed item, including things like the inventory of that item.">
+<meta property="og:url" content="http://localhost:1313/posts/whats-new/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Above the Ruin" />
+
+  <meta name="twitter:title" content="What&#39;s new?" />
+  <meta name="twitter:description" content="It&rsquo;s been a while since I posted an update, so I thought now would be a good time to
+let you all know why that is.
+Other than the full time job that I have, I&rsquo;ve been working on Above The …">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="generator" content="Hugo 0.154.3">
+  <link rel="alternate" href="http://localhost:1313/index.xml" type="application/rss+xml" title="Above the Ruin"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/brands.css" integrity="sha384-+eXGm6TmVoCZR1gX03US+L++L2mJIfOvp2X0+luTuEktXaF5F+e3zn0sO0HBvOyT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/fontawesome.css" integrity="sha384-B5nyPZa7e84uCJEYHtevCdVYtQosWsbDSRtq3cy/jeSVtQW05GL8CKXO7waXsjPK" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/regular.css" integrity="sha384-V71z/A/p/DGaZAryHhiSXRQj8HdQmK2nBgL2bX23MGD+h6ZKpyxOO76f5eSXmIaj" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/solid.css" integrity="sha384-1IIShlrK5iYgvS7OAgIH3prz4RAFP7hHZ2MaLIb9l3+trFwwnw/NdCWcUHlymZDU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/svg.css" integrity="sha384-iBa7uugTOHXqQ2ngvDYJyKrPPQbd9n2P3EQe+o/0+HZe5TNvV+LO5X0lLLUrXLHP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/svg-with-js.css" integrity="sha384-STWnS5AGz6M2YxsnGAd536EqcE2y+ktGovMMuhtXLsCBtl7lujeQj2eN4eDxa57x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/v4-font-face.css" integrity="sha384-fH83IkgQi7kturzlxpXfNdsR8aUOcqj5HUORRVnSvJgObZkIw6aqKAaQx20IWyB/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/v4-shims.css" integrity="sha384-cCODJHSivNBsaHei/8LC0HUD58kToSbDU+xT7Rs51BO1v/IvgT/uM0W6xMoUqKfn" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.0.1/css/v5-font-face.css" integrity="sha384-atSdF89mIn15dv+o2LKkDM6mCh3hwh6A7mwZ6F2it/kenqZbMu+QW/ye1OG4XSWV" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"><link rel="stylesheet" href="http://localhost:1313/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="http://localhost:1313/css/syntax.css" /><link rel="stylesheet" href="http://localhost:1313/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+  </head>
+  <body>
+    &nbsp;
+
+    <div class="intro-header" style="margin-top: 0; padding: 40px 0">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <a href="/">
+                    <img src="/images/logo.png" alt="Above the Ruin">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>It&rsquo;s been a while since I posted an update, so I thought now would be a good time to
+let you all know why that is.</p>
+<p>Other than the full time job that I have, I&rsquo;ve been working on <strong>Above The Ruin</strong> every day on my way to
+release a playabe demo.</p>
+<p>During this time, a lot of changes have happened. Most recently (yesterday in fact), I implemented
+a save and load system. I already had something in place for saving and loading stuff for scene
+transitions, but I didn&rsquo;t have anything to save the entire game state, in such a way that
+you could load a game rather than starting a new one each time.
+Now, you can save the game, and the state is saved as a JSON file, including things like game state and the state
+of every placed item, including things like the inventory of that item.</p>
+<p>I&rsquo;ve also completely changed the grid and interaction behaviour. The last version worked, but
+was over complicated and had a few problems.
+It used to have two methods of interaction. The player would do a ray cast in front of them, which would be
+used to interact with &ldquo;interactables&rdquo;, such as placed items or NPCs. If the ray reported no hit, I&rsquo;d then
+defer to the grid and ask it if there was anything in this cell that I could interact with (such as a plot of farm land).
+I would then also query if we had a tool equipped, and try to use that.</p>
+<p>Being a 2D game, I wasn&rsquo;t happy with the usage of physics to interact, but also wasn&rsquo;t happy with the different paths.
+I also had 3 grids, one for placeable items, one for autotiling, and one for autotiling overlay (watered farm plots).</p>
+<p>I&rsquo;ve completely changed all of this now. There&rsquo;s one grid, with a class that has methods such as <code>Register</code>. When an
+item is placed, it calls this <code>Register</code> method to store its cell and what it is. The same thing will happen for NPCs
+once I add movement to them. When they move, and their cell changes, they&rsquo;ll register their new cell with the grid.</p>
+<p>On interaction, I get the cell in front of the player (based on facing direction) and ask what&rsquo;s in this cell.</p>
+<p>Another thing I implemented is cutscenes. These are JSON files, with a list of action groups. Actions within each group are
+ran in parallel, but action groups themselves are ran sequentially. This enables things such as panning the camera and moving the player in
+one action group, then triggering dialogue in another, after the panning and movement have completed.
+Cutscenes have the ability to also give items, start quests and teleport the player.</p>
+<p>Here&rsquo;s an example of the JSON for a cutscene:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;bridge_shout&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;skippable&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;actionGroups&#34;</span>: [
+</span></span><span style="display:flex;"><span>    [
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;start_dialogue&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;npc_name&#34;</span>: <span style="color:#e6db74">&#34;Stranger&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;dialogue&#34;</span>: [
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Hellooooo! You there!&#34;</span>
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        ]
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    [
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;set_player_facing&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;right&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    [
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;start_dialogue&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;npc_name&#34;</span>: <span style="color:#e6db74">&#34;Stranger&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;dialogue&#34;</span>: [{
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Come over here, I hate shouting.&#34;</span>
+</span></span><span style="display:flex;"><span>        }]
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    [
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;move_player&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;target&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;x&#34;</span>: <span style="color:#ae81ff">0</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;y&#34;</span>: <span style="color:#ae81ff">-2</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;move_camera&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;target&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;x&#34;</span>: <span style="color:#ae81ff">0</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;y&#34;</span>: <span style="color:#ae81ff">-3</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    [
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;move_player&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;target&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;x&#34;</span>: <span style="color:#ae81ff">5</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;y&#34;</span>: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;move_camera&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;target&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;x&#34;</span>: <span style="color:#ae81ff">8</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;y&#34;</span>: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    [
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;start_dialogue&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;npc_name&#34;</span>: <span style="color:#e6db74">&#34;Stranger&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;dialogue&#34;</span>: [
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;I haven&#39;t seen you around here before, when did you get here?&#34;</span>
+</span></span><span style="display:flex;"><span>          },
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;...Not a talker ey? (Looks like it&#39;s gonna be one of those games)&#34;</span>
+</span></span><span style="display:flex;"><span>          },
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;I&#39;ve been gathering some supplies for a trip, but the stairwell here is blocked.&#34;</span>
+</span></span><span style="display:flex;"><span>          },
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;We could rebuild this bridge if we had some wood, then I could use your stairwell.&#34;</span>
+</span></span><span style="display:flex;"><span>          },
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Of course, I&#39;d give you some supplies for helping me out.&#34;</span>
+</span></span><span style="display:flex;"><span>          },
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Go and gather some wood. You&#39;ll probably find loads of the stuff scattered on the roof. Bring it back here when you&#39;re done.&#34;</span>
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        ]
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    [
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;start_quest&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;gather_wood&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    [
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;move_camera&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;target&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;x&#34;</span>: <span style="color:#ae81ff">-7</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;y&#34;</span>: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>These cutscenes are also triggered when the player leaves their house for the first time of the day. If they don&rsquo;t leave that day,
+the cutscene will play the next day.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;days&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;10&#34;</span>: [<span style="color:#e6db74">&#34;BridgeShout&#34;</span>]
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;quests&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;gather_wood&#34;</span>: <span style="color:#e6db74">&#34;GatheredBridgeWood&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Each day can have a number of cutscenes, which will all be played sequentially.</p>
+<p>Other than all of that, there&rsquo;s been some &ldquo;business as usual&rdquo; things, such as bug fixes, pixel art improvements etc.</p>
+<p>With a little more polish, and some more gameplay added, I should be able to release a video of the vertical slice :)</p>
+
+
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fwhats-new%2f&amp;text=What%27s%20new%3f&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fwhats-new%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fwhats-new%2f&amp;title=What%27s%20new%3f" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fwhats-new%2f&amp;title=What%27s%20new%3f" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fwhats-new%2f&amp;title=What%27s%20new%3f" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fwhats-new%2f&amp;description=What%27s%20new%3f" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="http://localhost:1313/posts/refactoring-for-saves/" data-toggle="tooltip" data-placement="top" title="Refactoring for Saving">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      <footer>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="https://abovetheruin.com">Cjmarkham</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://localhost:1313/">Above the Ruin</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.154.3</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script src="http://localhost:1313/js/main.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="http://localhost:1313/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

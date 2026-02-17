@@ -6,8 +6,15 @@
     <description>Recent content on Above the Ruin</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Jan 2026 16:20:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Feb 2026 08:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What&#39;s new?</title>
+      <link>http://localhost:1313/posts/whats-new/</link>
+      <pubDate>Mon, 16 Feb 2026 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/whats-new/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s been a while since I posted an update, so I thought now would be a good time to&#xA;let you all know why that is.&lt;/p&gt;&#xA;&lt;p&gt;Other than the full time job that I have, I&amp;rsquo;ve been working on &lt;strong&gt;Above The Ruin&lt;/strong&gt; every day on my way to&#xA;release a playabe demo.&lt;/p&gt;&#xA;&lt;p&gt;During this time, a lot of changes have happened. Most recently (yesterday in fact), I implemented&#xA;a save and load system. I already had something in place for saving and loading stuff for scene&#xA;transitions, but I didn&amp;rsquo;t have anything to save the entire game state, in such a way that&#xA;you could load a game rather than starting a new one each time.&#xA;Now, you can save the game, and the state is saved as a JSON file, including things like game state and the state&#xA;of every placed item, including things like the inventory of that item.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Refactoring for Saving</title>
       <link>http://localhost:1313/posts/refactoring-for-saves/</link>

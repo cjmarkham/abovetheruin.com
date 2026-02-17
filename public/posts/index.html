@@ -81,6 +81,95 @@
         <div class="posts-list">
           
             <article class="post-preview">
+    <a href="http://localhost:1313/posts/whats-new/">
+        <h2 class="post-title">What&#39;s new?</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on February 16, 2026
+  
+  
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Cjmarkham
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        <p>It&rsquo;s been a while since I posted an update, so I thought now would be a good time to
+let you all know why that is.</p>
+<p>Other than the full time job that I have, I&rsquo;ve been working on <strong>Above The Ruin</strong> every day on my way to
+release a playabe demo.</p>
+<p>During this time, a lot of changes have happened. Most recently (yesterday in fact), I implemented
+a save and load system. I already had something in place for saving and loading stuff for scene
+transitions, but I didn&rsquo;t have anything to save the entire game state, in such a way that
+you could load a game rather than starting a new one each time.
+Now, you can save the game, and the state is saved as a JSON file, including things like game state and the state
+of every placed item, including things like the inventory of that item.</p>
+        <a href="http://localhost:1313/posts/whats-new/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+
+</article>
+          
+            <article class="post-preview">
+    <a href="http://localhost:1313/posts/refactoring-for-saves/">
+        <h2 class="post-title">Refactoring for Saving</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 25, 2026
+  
+  
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Cjmarkham
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        <p>Up until now, I&rsquo;ve been having fun creating systems. However, when it came to
+wiring them up, I was a bit cavalier with how that was done. I did try to separate
+concerns as much as possible, having controllers to do the logic while renderers would
+listen to events that they emitted.</p>
+<p>However, if we take the <code>PlayerController</code> as an example, it had a lot of references on
+it for UI. Things like the dialogue wrapper, conversation box etc. For this vertical slice,
+it wasn&rsquo;t too bad. However, I&rsquo;m at the stage now where I need to move the player to a new scene.</p>
+        <a href="http://localhost:1313/posts/refactoring-for-saves/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+
+</article>
+          
+            <article class="post-preview">
     <a href="http://localhost:1313/posts/producer-levels/">
         <h2 class="post-title">Producer Levels</h2>
         
@@ -116,49 +205,6 @@ produce water every 8 hours*. The bee house will produce honey every 16 hours*.<
 the producer to alert you. While this was an option, I wanted to see if I could have the producer visually tell
 the player that it&rsquo;s ready.</p>
         <a href="http://localhost:1313/posts/producer-levels/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="http://localhost:1313/posts/refactoring-for-saves/">
-        <h2 class="post-title">Refactoring for Saving</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on January 17, 2026
-  
-  
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Cjmarkham
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        <p>Up until now, I&rsquo;ve been having fun creating systems. However, when it came to
-wiring them up, I was a bit cavalier with how that was done. I did try to separate
-concerns as much as possible, having controllers to do the logic while renderers would
-listen to events that they emitted.</p>
-<p>However, if we take the <code>PlayerController</code> as an example, it had a lot of references on
-it for UI. Things like the dialogue wrapper, conversation box etc. For this vertical slice,
-it wasn&rsquo;t too bad. However, I&rsquo;m at the stage now where I need to move the player to a new scene.</p>
-        <a href="http://localhost:1313/posts/refactoring-for-saves/" class="post-read-more">[Read More]</a>
         
     </div>
 
@@ -473,49 +519,16 @@ Here, you&rsquo;ll be able to fight off enemies, explore abandoned homes and off
 
 </article>
           
-            <article class="post-preview">
-    <a href="http://localhost:1313/posts/welcome/">
-        <h2 class="post-title">Welcome</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on January 9, 2026
-  
-  
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Cjmarkham
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        <p>This blog will serve as updates for the game, from technical challenges, artistic ones,  or just random
-thoughts throughout my journey.</p>
-<p>Making a game has always been a dream of mine. I got in to the Web Software Engineering industry
-about 15 years ago, but I&rsquo;ve always wished I got in to game development early on.</p>
-<p><strong>Above the Ruin</strong> is a passion project that I&rsquo;m working on in my spare time.
-If you have any questions, please feel free to reach out at <a href="">hello@abovetheruin.com</a>.</p>
-
-        
-    </div>
-
-    
-
-</article>
-          
         </div>
+        
+          <ul class="pager main-pager">
+            
+            
+              <li class="next">
+                <a href="http://localhost:1313/posts/page/2/">Older Posts &rarr;</a>
+              </li>
+            
+          </ul>
         
       </div>
     </div>

@@ -1,6 +1,6 @@
 +++
 date = '2026-02-16T08:00:00Z'
-title = 'What's new?
+title = "What's new?"
 +++
 
 It's been a while since I posted an update, so I thought now would be a good time to 
